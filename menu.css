@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color:hsl(210, 36%, 96%);
+}
+.header{
+    text-align: center;
+    margin-top: 82px;
+    font-size: 52px;
+    margin-bottom: 12px;
+}
+.hr1{
+    border-top: 6px solid #c59d5f;
+    width: 120px;
+    
+}
+.allbutton{
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom:82px ;
+}
+.allbutton button{
+    padding: 8px 22px;
+    font-size: 20px;
+    border-radius: 12px;
+    margin-left: 22px;
+    cursor: pointer;
+    color: #c59d5f;
+    border-color: #c59d5f;
+    transition: 0.5s;
+}
+.allbutton button:hover{
+    color: white;
+    background-color: #c59d5f;
+}
+article{
+    display: grid;
+    width: 1200px;
+    grid-template-columns: 50% 50%;
+    gap: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.hi{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.content{
+    display: flex;
+   justify-content: space-between;
+}
+.img{
+    width: 80%;
+    height: 160px;
+    border: 6px solid #c59d5f;
+    border-radius: 12px;
+}
+h5{
+    font-size: 22px;
+    margin-top: 14px;
+    margin-bottom: 2px;
+    width: 18px;
+    letter-spacing: 6px;
+}
+.hr{
+    border-top: 1px dotted black;
+    width: 250px;
+    margin-top: 80px;
+
+}
+.price{
+    margin-bottom: 22px;
+    color: #c59d5f;
+}
+.description{
+    color: hsl(210, 22%, 49%);
+    line-height: 26px;
+}
+.hide{
+    display: none;
+}
