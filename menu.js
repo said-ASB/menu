@@ -79,9 +79,6 @@ arraymenue = [
 ]
 
 
-
-
-
 const container = document.getElementById("html-link")
 window.addEventListener('DOMContentLoaded',()=>{
 index(arraymenue)
@@ -118,60 +115,40 @@ window.addEventListener("DOMContentLoaded",()=>{
 const containerbuttons = document.getElementById('buttonall')
 
 
-
+let emptyarray = [];
 function buttontype(){
-    let emptyarray = [];
-    arraymenue.map(elem =>{
-        if(!emptyarray.includes(elem.typee)){
-            emptyarray.push(elem.typee)
-            
-        }
-    })
-   const lastarray =  emptyarray.map(charackter=>{
-        return(`<button>${charackter}</button>`)
+  arraymenue.map(elem =>{
+    if(!emptyarray.includes(elem.typee)){
+      emptyarray.push(elem.typee)  
+    }
+  })
+  const lastarray =  emptyarray.map(charackter=>{
+      return(`<button class='btns'>${charackter}</button>`)
     }).join('')
-    containerbuttons.innerHTML = lastarray
+    containerbuttons.innerHTML = lastarray;
+
+  const filterbtns = containerbuttons.querySelectorAll('.btns');
+  filterbtns.forEach(elem =>{
+    elem.addEventListener('click',(event)=>{
+      const foodtype = event.target.innerText;
+      const filtermeneu = arraymenue.filter(meneuType=>{
+        if(meneuType.typee === foodtype){
+          return meneuType
+ 
+        }
+      })
+      if(foodtype === "all"){
+        index(arraymenue)
+      }else{
+        index(filtermeneu)
+      }
+    })
+  })  
 }
 
-  
-buttontype()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function x(){
-//     let v = []
-
-//     f.map(elem=>{
-//         if(!v.includes(elem.type)){
-//             v.push(elem.type)
-
-//         }
-        
-//     })
-// const allbt = v.map(charachter=>{
-//     return (`<button>${charachter}</button>`)
-
-// }).join('')
-
-// containerbuttons.innerHTML=allbt
-
-// }
-
-// x()
 
 
 
@@ -180,22 +157,7 @@ buttontype()
 //         return ele.typee === "Dinner"   
 //     });
 //     return index(myarray)
-// }
 
 
 
 
-
-
-
-
-
-
-
-//  1 creat a fun that creating but denamic 
-// 1 from the arrymenur creat a new array with just with types   
-// 2  creat dynamic from array of type
-// 3 listen every but and know click each bbtn
-// 4 when u click on btn save type in varable
-/// 5 creat  a filter that    retyen just elem type = varble frlm early 
- 
